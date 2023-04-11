@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>K-digital 3기 JS</title>
+</head>
+
+<body>
+    
+</body>
+    <main class="container">
+        <article>
+        <form>
+            <!-- Grid -->
+            <div class="grid">
+              <!-- Markup example 1: input is inside label -->
+              <label for="firstname">
+                성
+                <input type="text" id="firstname" name="firstname" placeholder="성을 입력하세요." required>
+              </label>
+          
+              <label for="lastname">
+                이름
+                <input type="text" id="lastname" name="lastname" placeholder="이름을 입력하세요." required>
+              </label>
+          
+            </div>        
+            <!-- Markup example 2: input is after label -->
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+            <small>We'll never share your email with anyone else.</small>
+          
+            <div class="grid">
+            <!-- Button -->
+            <!-- <button type="submit">확인</button> -->
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+            </div>    
+        </form>
+        </article>
+    </main>
+    
+</html>
