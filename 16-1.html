@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--pico css CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <link rel="stylesheet" href="./styles/13.css">
+    <!-- 외부스크립트 가져오기 -->
+    <script src="./scripts/16-1.js"></script>
+
+    <title>K-digital 3기 JS</title>
+
+</head>
+
+<body>
+    <main class="container">
+        <article>
+            <header>
+                <h1>주사위게임</h1>
+            </header>
+            <h2 id="h2Id" class="h2Class"></h2>
+            <footer>
+                <form>
+                    <!-- Radios -->
+                    <fieldset>
+                        <legend><h2>숫자선택</h2></legend>
+                        <div class="grid">
+                        <label for="r1">
+                            <input type="radio" id="r1" name="num" value="1">1
+                        </label>
+                        <label for="r2">
+                            <input type="radio" id="r2" name="num" value="2">2
+                        </label>
+                        <label for="r3">
+                            <input type="radio" id="r3" name="num" value="3">3
+                        </label>
+                        <label for="r4">
+                            <input type="radio" id="r4" name="num" value="4">4
+                        </label>
+                        <label for="r5">
+                            <input type="radio" id="r5" name="num" value="5">5
+                        </label>
+                        <label for="r6">
+                            <input type="radio" id="r6" name="num" value="6">6
+                        </label>
+                        </div>
+                    </fieldset>
+                    <div class="grid">
+                        <button id="bt1">확인</button>
+                        <button type="reset">취소</button>
+                    </div>
+                </form>
+            </footer>
+        </article>
+    </main>
+
+</body>
+
+</html>
