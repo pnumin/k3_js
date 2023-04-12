@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--pico css CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <link rel="stylesheet" href="./styles/17.css">
+    <!-- 외부스크립트 가져오기 -->
+    <script src="./scripts/17.js"></script>
+
+    <title>K-digital 3기 JS</title>
+
+</head>
+
+<body>
+    <main class="container">
+        <article>
+            <header>
+                <h1>주사위게임</h1>
+            </header>
+            <form>
+                <div class="grid">
+                    <select id="sel1">
+                        <option value="℃" selected>섭씨온도(℃)</option>
+                        <option value="℉">화씨온도(℉)</option>
+                    </select>
+                    <select id="sel2">
+                        <option value="℃">섭씨온도(℃)</option>
+                        <option value="℉" selected>화씨온도(℉)</option>
+                    </select>
+                </div>
+                <div class="grid">
+                    <input type="number" id="t1" name="t1">
+                    <div id="d1"></div>
+                    <input type="number" id="t2" name="t2" readonly>
+                    <div id="d2"></div>
+                </div>
+            </form>
+        </article>
+    </main>
+
+</body>
+
+</html>
