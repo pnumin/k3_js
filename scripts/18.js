@@ -9,25 +9,41 @@ const palindrome = (t1, t2) => {
     } 
 
     //입력내용이 있는 경우
-    //방법1
     let rs = '' ;
-    for(let i = s.length - 1; i >=0 ; i--) {
-        rs = rs + s[i] ;
-    }
+    //방법1
+    // for(let i = s.length - 1; i >=0 ; i--) {
+    //     rs = rs + s[i] ;
+    // }
+    
+    
+    //방법2 : 배열이용
+    s = s.split('');    //문자열.split(): 문자열을 분리자로 분리해서 배열만듬
+    s = s.reverse() ;   //배열.reverse(): 배열의 요소를 뒤집어줌
+    rs = s.join('') ;   //배열.join() : 배열의 요소를 문자열로 묶어줌
     console.log("s=",s, ",rs =", rs);
 
-    if ( s == rs) {
-        t2.value = rs + ": 회문입니다.";
+
+    //결과 확인
+    if ( t1.value == rs) {
+        t2.value = "회문입니다.";
     }
     else {
-        t2.value = `${rs} :회문이 아닙니다.`;
+        t2.value = `회문이 아닙니다.`;
     }
 
 }
 
 //숫자 합계
 const numSum = (t1, t2) => {
-    console.log('numSum');
+    let s = t1.value ;
+
+    //문자열 순회
+    let sum = 0 ;
+    for(let ch of s) {
+        console.log(ch, isNaN(ch))
+        if (!isNaN(ch)) sum = sum + parseInt(ch) ;
+    }
+    t2.value = sum ;
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -42,8 +58,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             event.preventDefault();
             let gubun = bt.getAttribute('id').slice(-1) ;
             if (gubun === '1') palindrome(txt1, txt2) ;
-            else numSum(txt1, txt2) ;
-            
+            else numSum(txt1, txt2) ;          
         });
     }
 }) ;
