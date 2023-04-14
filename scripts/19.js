@@ -42,22 +42,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }) ;
     }
 
-
-    //배열에서 자료삭제
+    //배열에서 자료삭제 : filter 기능 구현
     for(let cbt2 of cbt2s) {
         cbt2.addEventListener('click', (e)=>{
             e.preventDefault() ; 
-            switch (cbt2.textContent) {
-                case '사과삭제' :
+            let gubun = cbt2.textContent.replace('삭제', '') ;
+            // console.log(gubun) ;
+            // let temp = [] ;
+            // for(let item of arr) {
+            //     switch (gubun) {
+            //         case '사과' :
+            //             if (item != '🍎') temp.push(item) ;
+            //             break;
+            //         case '바나나' :
+            //             if (item != '🍌' ) temp.push(item) ;
+            //             break;
+            //         case '오렌지' :
+            //             if (item != '🍊' ) temp.push(item) ;
+            //             break;
+            //         case '수박' :
+            //             if (item != '🍉' ) temp.push(item) ;
+            //             break;
+            //     }         
+            // }    
+            // arr = temp ;
+
+            switch (gubun) {
+                case '사과' :
                     arr = arr.filter((item) => item != '🍎' );
                     break;
-                case '바나나삭제' :
+                case '바나나' :
                     arr = arr.filter((item) => item != '🍌' );
                     break;
-                case '오렌지삭제' :
+                case '오렌지' :
                     arr = arr.filter((item) => item != '🍊' );
                     break;
-                case '수박삭제' :
+                case '수박' :
                     arr = arr.filter((item) => item != '🍉' );
                     break;
             }
@@ -68,7 +88,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     for(let cbt3 of cbt3s) {
-        cbt3.addEventListener('click', ()=>{}) ;
+        cbt3.addEventListener('click', (e)=>{
+            e.preventDefault();
+            let gubun = cbt3.textContent.split('->')[0].trim() ;
+            console.log(gubun)
+
+            // let temp = []  ;
+            // for (let item of arr) {
+            //     switch (gubun) {
+            //         case '사과' :
+            //             if (item == '🍎') temp.push('🥕');
+            //             else temp.push(item) ;
+            //             break;
+            //         case '바나나' :
+            //             if (item == '🍌') temp.push('🥒');
+            //             else temp.push(item) ;
+            //             break;
+            //         case '오렌지' :
+            //             if (item == '🍊') temp.push('🥑');
+            //             else temp.push(item) ;
+            //             break;
+            //         case '수박' :
+            //             if (item == '🍉') temp.push('🥦');
+            //             else temp.push(item) ;
+            //             break;
+            //     }
+            // }
+
+            switch (gubun) {
+                case '사과' :
+                    arr = arr.map((item) => item == '🍎'? '🥕' : item);
+                    break;
+                case '바나나' :
+                    arr = arr.map((item) => item == '🍌'? '🥒' : item);
+                    break;
+                case '오렌지' :
+                    arr = arr.map((item) => item == '🍊'? '🥑' : item);
+                    break;
+                case '수박' :
+                    arr = arr.map((item) => item == '🍉'? '🥦' : item);
+                    break;
+            }
+
+            //문자열로 풀기
+            // temp = arr.join(',') ;
+            // switch (gubun) {
+            //     case '사과' :
+            //         temp = temp.replaceAll('🍎','🥕') ;
+            //         break;
+            //     case '바나나' :
+            //         temp = temp.replaceAll('🍌','🥒') ;
+            //         break;
+            //     case '오렌지' :
+            //         temp = temp.replaceAll('🍊','🥑') ;
+            //         break;
+            //     case '수박' :
+            //         temp = temp.replaceAll('🍉','🥦') ;
+            //         break;
+            // }
+            // console.log('temp=', temp)
+            // arr = temp.split(',') ;
+
+
+            txt1.value = arr.join(',') ;
+        }) ;
     }
 
 });
