@@ -56,9 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         flag = true;
                         document.querySelector('h2').innerHTML = '성공!!!' ;
 
-                        let lastArr = [1,2,3,4,5,6,7,8,9].filter((item)=> !selarr.includes(item))
-                        console.log(lastArr[0])
-                        boxs[lastArr[0]-1].innerHTML = '<img src="./images/hart.png">';
+                        //차집합 이용
+                        // let lastArr = [1,2,3,4,5,6,7,8,9].filter((item)=> !selarr.includes(item))
+                        // console.log(lastArr[0])
+                        // boxs[lastArr[0]-1].innerHTML = '<img src="./images/hart.png">';
+
+                        //1이 있는 위치 찾기
+                        let lastn = arr.findIndex((item)=>item == 1) ;
+                        console.log('find=', lastn);
+                        boxs[lastn].innerHTML = '<img src="./images/hart.png">';
                     }
 
                 }
